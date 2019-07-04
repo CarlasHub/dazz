@@ -1,0 +1,56 @@
+nav , header{
+    max-width: 1700px;
+}
+i.icon-purple {
+	background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+    @include icon-gradient;
+    @include breakpoint(sm) {
+        font-size: 30px;
+     }
+}
+.site-title {
+    @include breakpoint(sm) {
+       font-size: 20px;
+    }
+    
+	a{
+		color: lightgrey;
+		font-family: 'Shadows Into Light', cursive;
+		letter-spacing: 6px;
+		&:hover{
+			text-decoration: none;
+			background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+			@include icon-gradient;
+		}
+	}
+}
+
+.navbar-toggler{
+    
+    &:hover{
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+    color: transparent;
+    outline: none;
+    }
+}
+.menu-item{
+    margin-right: 20px;
+    margin-bottom: -25px;
+    position: relative;
+    @include breakpoint(md) {
+        margin-bottom: 25px;
+    }
+    a{
+        color: lightgrey;
+        font-size: 20px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 6px;
+    }
+    a:hover{
+        text-decoration: none;
+        background-color: #ad2f26;
+        background-image: linear-gradient(147deg, #333399 0%, #ff00cc 74%); 
+        @include icon-gradient;
+    }
+
+}
