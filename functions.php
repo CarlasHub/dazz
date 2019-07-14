@@ -135,6 +135,19 @@ function dazz_widgets_init() {
 }
 add_action( 'widgets_init', 'dazz_widgets_init' );
 
+function wp_search($items){
+	$search = '<li class="search">';
+	$search .= '<form method="get" id="searchform" action="/">';
+	$search .= '<input type="text" class="field" name="s" id="s" placeholder="Search" />';
+	$search .= '<button type="submit" id="searchsubmit"  value="Search" class="fas fa-search" ></button>';
+	$search .= '</form>';
+	$search .= '</li>';
+	return $items . $search;
+}
+
+add_filter('wp_nav_menu_items', 'wp_search');
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -149,12 +162,17 @@ function dazz_scripts() {
 
 	//scripts
 	wp_enqueue_script( 'dazz-jquery', get_template_directory_uri() . '/src/js/jquery-3.3.1.min.js', array('jquery'));
+	
+	wp_enqueue_script( 'dazz-jquery', get_template_directory_uri() . '/src/js/jquery-3.3.1.min.js', array('jquery'));
 
 	wp_enqueue_script( 'dazz-popper', get_template_directory_uri() . '/src/js/popper.min.js');
 
 	wp_enqueue_script( 'dazz-bootstrap', get_template_directory_uri() . '/src/js/bootstrap.min.js', array('jquery'));
 
+	wp_enqueue_script( 'dazz-skip-link-focus-fix', get_template_directory_uri() . '/src/js/custom.js');
+
 	wp_enqueue_script( 'dazz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
 
 	wp_enqueue_script( 'dazz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

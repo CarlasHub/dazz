@@ -1,21 +1,14 @@
 @import 'section01';
+@import 'section02';
+@import 'section03';
 @import 'social-icons';
 
 section {
-   
     width: 100%;
     height: 100%;
     background-color: transparent;
+    
   }
 
 
-  
-section h1 {
-    font-family : 'Josefin Sans', sans-serif;
-    text-align: center;
-    white-space: nowrap;
-    @include vertical-center;
-    color: #fff;
-    top: 10%;
-  }
-  
+

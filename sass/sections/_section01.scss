@@ -1,36 +1,49 @@
+#section01{
+	height: 100vh;
+	overflow: hidden;
+}
+
 #profile-pic { 
 	background-image: url("/indigo-Carla/wp-content/themes/dazz/src/img/profilepic.png");
 	height: 90%;
 	background-size: cover;
+	@include breakpoint(md) { 
+		height: 50%;
+
+	}
+
 	
 }
 
 .solid-wrapper {
 
-	height: 60%;
+	height: 60vh;
 	width: 90%;
 	@include vertical-center;
 	background-color: #1B2132;
 	border-radius: 15px;
 	box-shadow: 0 10px 15px rgba(0,0,0,0.5);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	top: 40%;
 	
 	
 	@include breakpoint(md) {
-    
-
-	height: 60%;
+	height: 50%;
 	width: 90%;
 	background-color: #1B2132;
 	border-radius: 15px;
 	box-shadow: 0 10px 15px rgba(0,0,0,0.5);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	position: relative;
-	top: 10%;
+	top: 20%;
 	left: 50%;
 	z-index: 2;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	@include breakpoint(sm) { 
+		top: 20%;
+
+	}
         
     }
 		
@@ -57,8 +70,8 @@
 .carousel-indicators {
     top: 10%;
 	li {
-	background-color:#ff00cc;
-	background-color: #ef473a;
+	background-color: #7579ff ;
+	background-image: linear-gradient(315deg, #7579ff  0%, #7579ff 74%);
 	width: 10px;
 	height: 10px;
 	border-radius: 100%;

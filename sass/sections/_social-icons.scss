@@ -1,9 +1,15 @@
 .wrapper-social {
     position: fixed;
     top: 49%;
-    padding-left: 5px;
+    padding-left: 0;
     float: left;
     display: inline;
+    z-index: 300;
+    @include breakpoint(md) {
+        top: 70%;
+
+    }
+    
 
     ul {
         list-style: none;
@@ -18,9 +24,7 @@
         border: 3px transparent;
         position: relative;
         cursor: pointer;
-        &:hover{
-            border: solid white 5px;
-        }
+       
     }
      .fab {
         cursor: pointer;
@@ -28,14 +32,15 @@
         right:0 ;
         transform: translate(-50%,-50%);
         font-size: 20px;
-        color: #ef473a;
+        color: #555d66;
+        padding: 0px;
+        &:hover{
+            color: white!important;
+            
+            
+        }
         
     }
-
-  
- 
-
- 
 	
 }
 

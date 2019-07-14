@@ -3,9 +3,9 @@
 <section id="section01" class="demo container-fluid">
     <div class="row h-100">
 
-        <div id="profile-pic" class="col-lg-6 my-auto"></div>
+        <div id="profile-pic" class="col-lg-6 col-sm-12"></div>
 
-        <div class="col-lg-6 my-auto h-100">
+        <div class="col-lg-6 col-sm-12 h-100">
             <div class="solid-wrapper"> 
                 <!-- carousel start -->
                 <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
@@ -32,10 +32,11 @@
                         <div class="carousel-item <?php echo $i == 0 ? ' active': ''; $i++; ?>" >
 
                             <img alt="First slide" class="d-block w-100" src="<?php echo $url; ?>">
+                            
+                            <h5 class="card-title text-white text-center pt-2"><?php  the_title(); ?> </i></h5>
 
-                            <a href="<?php echo get_the_permalink($page->ID); ?>" class="btn bg-pink text-center mx-0">Go Somewhere</a>
+                            <!-- <a href="<?php //echo get_the_permalink($page->ID); ?>" class="btn bg-pink text-center mx-0">Go Somewhere</a> -->
 
-                            <h5 class="card-title text-white"><?php  the_title(); ?> </i></h5>
 
                         </div>
 

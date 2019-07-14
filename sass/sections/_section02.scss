@@ -1,0 +1,206 @@
+#section02{
+	
+   position: relative;
+   height: 100%;
+
+   
+.intro{
+	padding: 0 20px  0 0;
+
+	h1 , p{
+	max-width: 1300px;
+	margin: auto;
+	color: #6f7485;
+	
+
+	}
+  }
+
+  
+ 
+ h1 {
+	text-align: center;
+	font-weight: 300;
+	color: #777
+ }
+ 
+ h1 span {
+	font-weight: 600;
+ }
+ 
+ .container {
+	width: 80%;
+	padding: 50px 0;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+ }
+ 
+ .container:before {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #adb5bd12;
+    z-index: 1;
+ }
+ 
+ .timeline-block {
+	width: -webkit-calc(50% + 8px);
+	width: -moz-calc(50% + 8px);
+	width: calc(50% + 8px);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	justify-content: space-between;
+	clear: both;
+ }
+ 
+ .timeline-block-right {
+	float: right;
+ }
+ 
+ .timeline-block-left {
+	float: left;
+	direction: rtl
+ }
+ 
+ .marker {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	//border: 2px solid #F5F7FA;
+	background-color: #7579ff ;
+	background-image: linear-gradient(315deg, #7579ff  0%, #7579ff 74%);
+	margin-top: 10px;
+	z-index: 9999
+ }
+ 
+ .timeline-content {
+	width: 95%;
+	padding: 0 15px;
+	color: #666
+ }
+ 
+ .timeline-content h3 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 25px;
+	font-weight: 900;
+	color: #7579ff ;
+ }
+ 
+ .timeline-content span {
+	font-size: 15px;
+	color: #a4a4a4;
+ }
+ 
+ .timeline-content p {
+	font-size: 14px;
+	line-height: 1.5em;
+	word-spacing: 1px;
+	color: #888;
+ }
+ 
+ 
+ @media screen and (max-width: 768px) {
+	.container:before {
+	   left: 8px;
+	   width: 2px;
+	}
+	.timeline-block {
+	   width: 100%;
+	   margin-bottom: 30px;
+	}
+	.timeline-block-right {
+	   float: none;
+	}
+ 
+	.timeline-block-left {
+	   float: none;
+	   direction: ltr;
+	}
+ }
+ 
+}
+
+
+
+a.btn-large{
+	background: #555d66;
+	width: 45%;
+	text-decoration: none;
+	color: #fff;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 20px;
+	background-color: #7579ff ;
+	background-image: linear-gradient(315deg, #7579ff  0%, #7579ff 74%);
+	&:hover{
+	background-color: #bc6f03;
+    background-image: linear-gradient(315deg, #bc6f03 0%, #874000 74%);
+	}
+	
+
+}
+
+
+.cards {
+	width: 60%;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: auto;
+	margin-top: 2.5rem;
+  }
+  
+  .card {
+	align-items: center;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex: 0 0 13.5rem;
+	flex-direction: column;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	position: relative;
+  }
+  
+  .card__title {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin: 0 0 0.5rem;
+	text-align: center;
+  }
+  
+  .card__image {
+	height: 300px;
+	margin-bottom: 0.5rem;
+	overflow: hidden;
+	width: 100%;
+  }
+  
+  .card__image img {
+	object-fit: cover;
+	overflow: hidden;
+	/* transition duration is less than the one on hover */
+	/* so img returns faster to its original position */
+	transition: transform 1s ease-in-out;
+	width: 100%;
+  }
+  
+  .card__image:hover img {
+	transform: translateY(calc(-100% + 200px));
+	transition: transform 15s ease-in-out;
+  }
+  

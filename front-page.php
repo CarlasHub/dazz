@@ -17,9 +17,8 @@ get_header();
         <div id="page-wrapper">
         <?php include "inc/social-icons.php";?>
         <?php get_template_part( 'template-parts/section01' );?>
-       
-
-        
+        <?php get_template_part( 'template-parts/section02' );?>
+        <?php get_template_part( 'template-parts/section03' );?>
         </div>
 
     

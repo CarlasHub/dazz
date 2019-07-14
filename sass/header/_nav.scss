@@ -1,5 +1,19 @@
 nav , header{
     max-width: 1700px;
+    color: #777;
+    
+}
+.fixed{
+    background:#1B2132;
+    z-index:1170;
+    margin:0 auto;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    text-align: center;
+
 }
 i.icon-purple {
 	background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
@@ -9,6 +23,7 @@ i.icon-purple {
      }
 }
 .site-title {
+    font-size: 30px;
     @include breakpoint(sm) {
        font-size: 20px;
     }
@@ -24,6 +39,8 @@ i.icon-purple {
 		}
 	}
 }
+ 
+
 
 .navbar-toggler{
     
@@ -48,9 +65,88 @@ i.icon-purple {
     }
     a:hover{
         text-decoration: none;
-        background-color: #ad2f26;
-        background-image: linear-gradient(147deg, #333399 0%, #ff00cc 74%); 
+        background-color: lightgrey;
+        //border-bottom:  solid  lightgrey 3px;
         @include icon-gradient;
     }
 
 }
+
+i.fa-search{
+    color: #555d66;
+    
+}
+
+#searchform , i{
+   
+    #searchsubmit{
+        
+        background: transparent!important;
+        background-color: transparent!important;
+        color: #7579ff;
+       border: none;
+    }
+    .field{
+    color: white;
+    width: 87px;
+    font-size: 13px;
+    border-radius: 30px;
+    margin-right: 10px;
+    outline: none;
+    border: #7579ff solid;
+    background: transparent;
+    -webkit-transition: width 1s 99s;
+    transition: width 1s 99s;
+    padding:  5px 5px;
+   
+     
+      &::placeholder {
+        color: #7579ff ;
+        padding: 5px;
+        
+      }
+      &:hover{
+        width:  300px;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+        &::placeholder {
+            color:white;
+        }
+    }
+    }
+
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 13px; // to adjust width
+    background: linear-gradient(147deg, #1D2237 0%, #2c3e50 74%);
+    //background: transparent;
+   
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    //-webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);
+    width: 10px;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+    color: transparent;
+    
+  }
+  
+  
+  ::-webkit-scrollbar {
+    height: 10%!important;
+   
+  }
+  
+  ::-webkit-scrollbar{
+    width: 10px;
+    height: 10px!important;
+    padding-top: 40px;
+  }
+  
+

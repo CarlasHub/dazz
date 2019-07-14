@@ -1,72 +1,76 @@
 
+<section id="section02" class="container-fluid">
+<!-- <canvas id="waves"> </canvas> -->
 
-<section id="section01" class="demo container-fluid">
-    <div class="row h-100">
+<!-- intro -->
+<div class="intro text-center px-5"> 
+    <h1>Bespoke Themes For All Needs</h1>
+    <br>
+    <p class="dynamic-text"> orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etorem ipsum dolor sit amet, 
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore etorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+            incididunt ut labore et
+    </p>
+</div>
 
-        <div id="profile-pic" class="col-lg-6 my-auto"></div>
+<!-- intro end -->
 
-        <div class="col-lg-6 my-auto h-100">
-            <div class="solid-wrapper"> 
-                <!-- carousel start -->
-                <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
-                    <div class="carousel-inner">
-                    <?php
-
-                        /* Start the Loop */
-                        $args = array( 'numberposts' => 3, 'orderby' => 'date' );
-
-                        $postslist = get_posts( $args );
-
-                        if( count($postslist) ):
-
-                            $i = 0;
-
-                        foreach ($postslist as $post) :  setup_postdata($post);
-
-
-                        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
-
-                        list($url, $width, $height, $is_intermediate) = $thumbnail;
-
-                            ?> 
-                        <div class="carousel-item <?php echo $i == 0 ? ' active': ''; $i++; ?>" >
-
-                            <img alt="First slide" class="d-block w-100" src="<?php echo $url; ?>">
-
-                            <a href="<?php echo get_the_permalink($page->ID); ?>" class="btn bg-pink text-center mx-0">Go Somewhere</a>
-
-                            <h5 class="card-title text-white"><?php  the_title(); ?> </i></h5>
-
-                        </div>
-
-                        <?php 
-                    
-                        endforeach;
-
-                     endif;
-                     ?>
-
-                       
+<div class="row h-100">
+        <div class="col-lg-6">
+            <!-- timeline -->
+            <div class="container">
+                <div class="timeline-block timeline-block-right">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>First Year</h3>
+                        <span>Some work experience</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
                     </div>
                 </div>
-            <!-- carousel end -->
-                
-                <ol class="carousel-indicators">
-                    <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"></li>
-                    <li data-slide-to="1" data-target="#carouselExampleIndicators"></li>
-                    <li data-slide-to="2" data-target="#carouselExampleIndicators"></li>
-                </ol>
-
-                <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleIndicators" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a>
-                <a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
-
+                <div class="timeline-block timeline-block-left">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>Seconed Year</h3>
+                        <span>Some work experience</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    </div>
+                </div>
+                <div class="timeline-block timeline-block-right">
+                    <div class="marker"></div>
+                    <div class="timeline-content">
+                        <h3>Third Year</h3>
+                        <span>Some work experience</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    </div>
+                </div>
             </div>
+            <!-- timeline endes -->
+           
+        </div>
+        <div  class="col-lg-6 col-sm-12 h-100 text-center">
+            <div class="cards">
+                <div class="card">
+                <h2 class="card__title">Card Title I</h2>
+                <div class="card__image">
+                    <img src="<?php  bloginfo('template_directory')?>/src/img/design1.png" alt="" />
+                </div>
+                </div>
+                <div class="card">
+                <h2 class="card__title">Card Title II</h2>
+                <div class="card__image">
+                    <img src="<?php  bloginfo('template_directory')?>/src/img/design1.png" alt="" />
+                </div>
+                </div>
+                <div class="card">
+                <h2 class="card__title">Card Title III</h2>
+                <div class="card__image">
+                    <img src="<?php  bloginfo('template_directory')?>/src/img/design1.png" alt="" />
+                </div>
+                </div>
+            </div>
+            
+            <div class="overlay"></div>
+            <a href="#section03" class="jump-sect3 btn-large d-block text-center"> Get in Touch</a>
         </div>
     </div>
-
 </section>
-
-
-
-
-
