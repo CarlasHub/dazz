@@ -44,26 +44,73 @@
 
   }
 
-
+	//list of colors
+	$colors-list:Yellow , #20639B, #3CADA2;
+	//define mixin
+	@mixin color($color){
+	color: $color;
+	}
+	@mixin bgcolor($color){
+	background-color: $color;
+	}
 
   @mixin breakpoint($class) {
 	@if $class == xs {
-	  @media (max-width: 767px) { @content; }
+	  @media (min-width: 767px) { @content; }
 	}
    
 	@else if $class == sm {
-	  @media (max-width: 768px) { @content; }
+	  @media (min-width: 768px) { @content; }
 	}
    
 	@else if $class == md {
-	  @media (max-width: 992px) { @content; }
+	  @media (min-width: 992px) { @content; }
 	}
    
 	@else if $class == lg {
-	  @media (max-width: 1200px) { @content; }
+	  @media (min-width: 1200px) { @content; }
 	}
    
 	@else {
 	  @warn "Breakpoint mixin supports: xs, sm, md, lg";
 	}
+  }
+
+
+  @-webkit-keyframes pulse {
+	0% {
+		box-shadow: inset 0 0 0 -500px rgba(blue,0.6);
+		
+	}
+	70% {
+		box-shadow: inset 0 0 0 100px rgba(blue,0.6);
+	
+	}
+	100% {
+		box-shadow: inset 0 0 0 -1000px rgba(blue,0.6);
+		
+	
+		
+	}
+  }
+  @keyframes pulse {
+	0% {
+		box-shadow: inset 0 0 0 1500px rgba(blue,0.6);
+		
+	}
+	70% {
+		box-shadow: inset 0 0 0 1000px rgba(blue,0.6);
+		
+	}
+	100% {
+		box-shadow: inset 0 0 0 -1000px rgba(blue,0.6);
+	
+		
+			
+		
+	}
+  }
+
+  .d-none{
+	  display: none;
   }

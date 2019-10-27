@@ -1,7 +1,8 @@
-@import 'section01';
+
 @import 'section02';
 @import 'section03';
 @import 'social-icons';
+@import 'blog-posts-carousel';
 
 section {
     width: 100%;
@@ -10,5 +11,18 @@ section {
     
   }
 
-
+aside{
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(md){
+    flex-direction: row;
+  }
+  section{
+    display: flex;
+    flex-direction: column;
+    ul{
+      list-style: none;
+    }
+  }
+}
 

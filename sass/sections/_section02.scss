@@ -10,7 +10,7 @@
 	h1 , p{
 	max-width: 1300px;
 	margin: auto;
-	color: #6f7485;
+	
 	
 
 	}
@@ -21,7 +21,7 @@
  h1 {
 	text-align: center;
 	font-weight: 300;
-	color: #777
+	
  }
  
  h1 span {
@@ -77,8 +77,8 @@
 	height: 16px;
 	border-radius: 50%;
 	//border: 2px solid #F5F7FA;
-	background-color: #7579ff ;
-	background-image: linear-gradient(315deg, #7579ff  0%, #7579ff 74%);
+	background-color: $discopurple ;
+	background-image: linear-gradient(315deg, $discopurple  0%, $discopurple 74%);
 	margin-top: 10px;
 	z-index: 9999
  }
@@ -86,7 +86,7 @@
  .timeline-content {
 	width: 95%;
 	padding: 0 15px;
-	color: #666
+	color: $text-color;
  }
  
  .timeline-content h3 {
@@ -94,19 +94,19 @@
 	margin-bottom: 5px;
 	font-size: 25px;
 	font-weight: 900;
-	color: #7579ff ;
+	color: $discopurple ;
  }
  
  .timeline-content span {
 	font-size: 15px;
-	color: #a4a4a4;
+	color: $text-color;
  }
  
  .timeline-content p {
 	font-size: 14px;
 	line-height: 1.5em;
 	word-spacing: 1px;
-	color: #888;
+	color: $text-color;
  }
  
  
@@ -134,7 +134,6 @@
 
 
 a.btn-large{
-	background: #555d66;
 	width: 45%;
 	text-decoration: none;
 	color: #fff;
@@ -142,8 +141,7 @@ a.btn-large{
 	margin-top: 20px;
 	border-radius: 5px;
 	padding: 20px;
-	background-color: #7579ff ;
-	background-image: linear-gradient(315deg, #7579ff  0%, #7579ff 74%);
+	background-color: $neath-grey ;
 	&:hover{
 	background-color: #bc6f03;
     background-image: linear-gradient(315deg, #bc6f03 0%, #874000 74%);
